@@ -1,0 +1,226 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "subject": [
+        {
+            "name": "binary-linux-amd64",
+            "digest": {
+                "sha256": "e49e0b2bd4e3a524d96f937328b2fc7ef0dd318d0bda6632aaad4a21dd108619"
+            }
+        }
+    ],
+    "predicate": {
+        "builder": {
+            "id": "https://github.com/slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@refs/tags/v1.4.0"
+        },
+        "buildType": "https://github.com/slsa-framework/slsa-github-generator/go@v1",
+        "invocation": {
+            "configSource": {
+                "uri": "git+https://github.com/mbestavros/supply-chain-pipeline-demo@refs/heads/main",
+                "digest": {
+                    "sha1": "1002ac5e8253ec36052179591cf28d235fe659de"
+                },
+                "entryPoint": ".github/workflows/build-provenance.yml"
+            },
+            "parameters": {},
+            "environment": {
+                "arch": "X64",
+                "github_actor": "mbestavros",
+                "github_actor_id": "10786787",
+                "github_base_ref": "",
+                "github_event_name": "workflow_dispatch",
+                "github_event_payload": {
+                    "inputs": null,
+                    "ref": "refs/heads/main",
+                    "repository": {
+                        "allow_forking": true,
+                        "archive_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/{archive_format}{/ref}",
+                        "archived": false,
+                        "assignees_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/assignees{/user}",
+                        "blobs_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/git/blobs{/sha}",
+                        "branches_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/branches{/branch}",
+                        "clone_url": "https://github.com/mbestavros/supply-chain-pipeline-demo.git",
+                        "collaborators_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/collaborators{/collaborator}",
+                        "comments_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/comments{/number}",
+                        "commits_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/commits{/sha}",
+                        "compare_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/compare/{base}...{head}",
+                        "contents_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/contents/{+path}",
+                        "contributors_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/contributors",
+                        "created_at": "2022-09-01T18:33:27Z",
+                        "default_branch": "main",
+                        "deployments_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/deployments",
+                        "description": "A demo of supply chain tools like in-toto and sigstore working together with Keylime.",
+                        "disabled": false,
+                        "downloads_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/downloads",
+                        "events_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/events",
+                        "fork": false,
+                        "forks": 0,
+                        "forks_count": 0,
+                        "forks_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/forks",
+                        "full_name": "mbestavros/supply-chain-pipeline-demo",
+                        "git_commits_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/git/commits{/sha}",
+                        "git_refs_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/git/refs{/sha}",
+                        "git_tags_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/git/tags{/sha}",
+                        "git_url": "git://github.com/mbestavros/supply-chain-pipeline-demo.git",
+                        "has_discussions": false,
+                        "has_downloads": true,
+                        "has_issues": true,
+                        "has_pages": false,
+                        "has_projects": true,
+                        "has_wiki": true,
+                        "homepage": null,
+                        "hooks_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/hooks",
+                        "html_url": "https://github.com/mbestavros/supply-chain-pipeline-demo",
+                        "id": 531641846,
+                        "is_template": false,
+                        "issue_comment_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/issues/comments{/number}",
+                        "issue_events_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/issues/events{/number}",
+                        "issues_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/issues{/number}",
+                        "keys_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/keys{/key_id}",
+                        "labels_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/labels{/name}",
+                        "language": "Python",
+                        "languages_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/languages",
+                        "license": {
+                            "key": "apache-2.0",
+                            "name": "Apache License 2.0",
+                            "node_id": "MDc6TGljZW5zZTI=",
+                            "spdx_id": "Apache-2.0",
+                            "url": "https://api.github.com/licenses/apache-2.0"
+                        },
+                        "merges_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/merges",
+                        "milestones_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/milestones{/number}",
+                        "mirror_url": null,
+                        "name": "supply-chain-pipeline-demo",
+                        "node_id": "R_kgDOH7A19g",
+                        "notifications_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/notifications{?since,all,participating}",
+                        "open_issues": 0,
+                        "open_issues_count": 0,
+                        "owner": {
+                            "avatar_url": "https://avatars.githubusercontent.com/u/10786787?v=4",
+                            "events_url": "https://api.github.com/users/mbestavros/events{/privacy}",
+                            "followers_url": "https://api.github.com/users/mbestavros/followers",
+                            "following_url": "https://api.github.com/users/mbestavros/following{/other_user}",
+                            "gists_url": "https://api.github.com/users/mbestavros/gists{/gist_id}",
+                            "gravatar_id": "",
+                            "html_url": "https://github.com/mbestavros",
+                            "id": 10786787,
+                            "login": "mbestavros",
+                            "node_id": "MDQ6VXNlcjEwNzg2Nzg3",
+                            "organizations_url": "https://api.github.com/users/mbestavros/orgs",
+                            "received_events_url": "https://api.github.com/users/mbestavros/received_events",
+                            "repos_url": "https://api.github.com/users/mbestavros/repos",
+                            "site_admin": false,
+                            "starred_url": "https://api.github.com/users/mbestavros/starred{/owner}{/repo}",
+                            "subscriptions_url": "https://api.github.com/users/mbestavros/subscriptions",
+                            "type": "User",
+                            "url": "https://api.github.com/users/mbestavros"
+                        },
+                        "private": false,
+                        "pulls_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/pulls{/number}",
+                        "pushed_at": "2023-01-11T22:39:12Z",
+                        "releases_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/releases{/id}",
+                        "size": 1072,
+                        "ssh_url": "git@github.com:mbestavros/supply-chain-pipeline-demo.git",
+                        "stargazers_count": 6,
+                        "stargazers_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/stargazers",
+                        "statuses_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/statuses/{sha}",
+                        "subscribers_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/subscribers",
+                        "subscription_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/subscription",
+                        "svn_url": "https://github.com/mbestavros/supply-chain-pipeline-demo",
+                        "tags_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/tags",
+                        "teams_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/teams",
+                        "topics": [],
+                        "trees_url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo/git/trees{/sha}",
+                        "updated_at": "2022-12-24T20:30:33Z",
+                        "url": "https://api.github.com/repos/mbestavros/supply-chain-pipeline-demo",
+                        "visibility": "public",
+                        "watchers": 6,
+                        "watchers_count": 6,
+                        "web_commit_signoff_required": false
+                    },
+                    "sender": {
+                        "avatar_url": "https://avatars.githubusercontent.com/u/10786787?v=4",
+                        "events_url": "https://api.github.com/users/mbestavros/events{/privacy}",
+                        "followers_url": "https://api.github.com/users/mbestavros/followers",
+                        "following_url": "https://api.github.com/users/mbestavros/following{/other_user}",
+                        "gists_url": "https://api.github.com/users/mbestavros/gists{/gist_id}",
+                        "gravatar_id": "",
+                        "html_url": "https://github.com/mbestavros",
+                        "id": 10786787,
+                        "login": "mbestavros",
+                        "node_id": "MDQ6VXNlcjEwNzg2Nzg3",
+                        "organizations_url": "https://api.github.com/users/mbestavros/orgs",
+                        "received_events_url": "https://api.github.com/users/mbestavros/received_events",
+                        "repos_url": "https://api.github.com/users/mbestavros/repos",
+                        "site_admin": false,
+                        "starred_url": "https://api.github.com/users/mbestavros/starred{/owner}{/repo}",
+                        "subscriptions_url": "https://api.github.com/users/mbestavros/subscriptions",
+                        "type": "User",
+                        "url": "https://api.github.com/users/mbestavros"
+                    },
+                    "workflow": ".github/workflows/build-provenance.yml"
+                },
+                "github_head_ref": "",
+                "github_ref": "refs/heads/main",
+                "github_ref_type": "branch",
+                "github_repository_id": "531641846",
+                "github_repository_owner": "mbestavros",
+                "github_repository_owner_id": "10786787",
+                "github_run_attempt": "1",
+                "github_run_id": "3897336567",
+                "github_run_number": "4",
+                "github_sha1": "1002ac5e8253ec36052179591cf28d235fe659de",
+                "os": "ubuntu22"
+            }
+        },
+        "buildConfig": {
+            "version": 1,
+            "steps": [
+                {
+                    "command": [
+                        "/opt/hostedtoolcache/go/1.19.4/x64/bin/go",
+                        "mod",
+                        "vendor"
+                    ],
+                    "env": null,
+                    "workingDir": "/home/runner/work/supply-chain-pipeline-demo/supply-chain-pipeline-demo/__PROJECT_CHECKOUT_DIR__"
+                },
+                {
+                    "command": [
+                        "/opt/hostedtoolcache/go/1.19.4/x64/bin/go",
+                        "build",
+                        "-mod=vendor",
+                        "-o",
+                        "binary-linux-amd64",
+                        "./hello-go/hello.go"
+                    ],
+                    "env": [
+                        "GOOS=linux",
+                        "GOARCH=amd64"
+                    ],
+                    "workingDir": "/home/runner/work/supply-chain-pipeline-demo/supply-chain-pipeline-demo/__PROJECT_CHECKOUT_DIR__"
+                }
+            ]
+        },
+        "metadata": {
+            "buildInvocationID": "3897336567-1",
+            "completeness": {
+                "parameters": true,
+                "environment": false,
+                "materials": false
+            },
+            "reproducible": false
+        },
+        "materials": [
+            {
+                "uri": "git+https://github.com/mbestavros/supply-chain-pipeline-demo@refs/heads/main",
+                "digest": {
+                    "sha1": "1002ac5e8253ec36052179591cf28d235fe659de"
+                }
+            },
+            {
+                "uri": "https://github.com/actions/virtual-environments/releases/tag/ubuntu22/20221212.1"
+            }
+        ]
+    }
+}

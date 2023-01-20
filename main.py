@@ -1,6 +1,6 @@
 import argparse, base64, hashlib, json
 
-import sigstore_helpers
+import sigstore_helpers, signing_spec, ecdsa
 
 from cryptography import x509
 from cryptography.hazmat.primitives import hashes
@@ -21,9 +21,9 @@ def main():
         binary = f.read()
 
     with open("artifacts/binary-linux-amd64.intoto.jsonl", "r") as f:
-        provenance = f.read()
+        provenance_bytes = f.read()
 
-    provenance = json.loads(provenance)
+    provenance = json.loads(provenance_bytes)
     payload_decoded = base64.b64decode(provenance["payload"]).decode()
     payload_json = json.loads(payload_decoded)
 
@@ -49,12 +49,12 @@ def main():
         cert = x509.load_pem_x509_certificate(certificate_bin)
 
         pubkey = cert.public_key()
-        signature = base64.b64decode(provenance["signatures"][0]["sig"])
-        payload_to_verify = base64.b64decode(provenance["payload"])
 
-        passed = pubkey.verify(signature, payload_to_verify, ec.ECDSA(hashes.SHA256()))
+        verifier = ecdsa.Verifier(pubkey)
 
-        print(passed)
+        result = signing_spec.Verify(provenance_bytes, [('mykey', verifier)])
+
+        print(result)
 
         # TODO: Actually check if integrated_time is within expiry
         integrated_time = retrieved_entry.integrated_time

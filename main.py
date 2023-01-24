@@ -59,7 +59,22 @@ def main():
         # TODO: Actually check if integrated_time is within expiry
         integrated_time = retrieved_entry.integrated_time
 
+        print("cert info: ")
+        print()
 
+        extensions = cert.extensions
+        caller_repository = get_extension(extensions, "1.3.6.1.4.1.57264.1.5")
+        issuer = get_extension(extensions, "1.3.6.1.4.1.57264.1.1")
+        trigger = get_extension(extensions, "1.3.6.1.4.1.57264.1.2")
+        caller_hash = get_extension(extensions, "1.3.6.1.4.1.57264.1.3")
+
+        print(caller_repository, issuer, trigger, caller_hash)
+
+
+def get_extension(extensions, oid):
+    for ext in extensions:
+        if ext.oid.dotted_string == oid:
+            return ext.value.value
 
 if __name__ == "__main__":
    main()
